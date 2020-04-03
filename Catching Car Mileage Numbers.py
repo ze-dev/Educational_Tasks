@@ -1,9 +1,8 @@
 '''Catching Car Mileage Numbers
 https://www.codewars.com/kata/52c4dd683bfd3b434c000292/train/python
-answers: 0 - no, 1 - may be through 2 miles, 2 - Yes
+answers: 0 - No, 1 - may be through 2 miles, 2 - Yes
 '''
 n= 2552
-
 awesome_phrases = [1337, 256]
 
 def is_interesting(n, awesome_phrases):
@@ -14,13 +13,12 @@ def is_interesting(n, awesome_phrases):
     else:
         marks = (0,1,1)
     import math
-    global ans, ns
     ans = [0]
     for step in marks:
-        n = n + step                                                   ; print('n= ', n)
+        n = n + step                                              
         ns = str(n)
         if ns.count('0') == len(ns)-1 or len(set(ns)) == 1:
-            ans.append(2 - step)                                                 ;print(22)                                       
+            ans.append(2 - step)                                                                         
         aUp = list(range(len(ns)))                              
         aDn = list(reversed(list(aUp))) 
         for arr in (aUp, aDn ):  
@@ -30,17 +28,17 @@ def is_interesting(n, awesome_phrases):
             if ns[-1] == '0':  
                 if arr[:-1]==list(int(x) for x in ns)[:-1] :
                     if ns[-2] == '9' or  ns[-2] == '1':
-                        ans.append(2 - step)                                 ;print(33)                                      
+                        ans.append(2 - step)                                                             
             elif arr == list(int(x) for x in ns):
-                    ans.append(2 - step)                                    ;print(44)                                    
+                    ans.append(2 - step)                                                                   
         h = math.floor(len(ns)/2)                       
         lef = ''.join(list(reversed(ns[:h])))
         if len(ns)%2 == 1:                          
             h += 1
         if  lef == ns[h:]:
-            ans.append(2 - step)                                      ;print(55)
+            ans.append(2 - step)                                    
         if n in awesome_phrases:
-            ans.append(2 - step)                                     ;print(66)
+            ans.append(2 - step)                                   
         if max(ans) == 2 :
             return max(ans)
         elif max(ans) == 1:
