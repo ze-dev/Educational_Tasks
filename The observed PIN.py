@@ -18,6 +18,6 @@ def get_pins(c):
     aw=sorted(aa);  print(aw)
     print(aq==aw)
            
-get_pins("11")    # m.b. False     
-get_pins('369')   # m.b. True
-get_pins("1357")  # m.b. False
+get_pins("11")    # must be False     
+get_pins('369')   # must be True
+get_pins("1357")  # must be False
