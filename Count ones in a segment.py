@@ -7,14 +7,12 @@ for i in islice(run_gen, (right + 1- left)): - пока самый быстры�
 '''
 import time
 
-##from collections import Counter as cnr
 be = 12
 en = 29  # answer 51
 en = 10000000
-#---
+#--------
 be=130000
 en=152629
-
 
 #=====================
 
@@ -39,7 +37,6 @@ def countOnes(left, right):
 
     con = time.time()
     return (ss, con - nac)
-
 
 #======================
 
