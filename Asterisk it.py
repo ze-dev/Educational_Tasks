@@ -24,5 +24,5 @@ def asterisc_it(n):
         res = ''.join([res, '*' if all([res[-1] in evens, el in evens]) else '', el])
     return res
 
-print(asterisc_it(n))
+print(asterisc_it(n) == an)
   
